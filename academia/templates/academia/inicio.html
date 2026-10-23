@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ nome_academia }}</title>
+</head>
+<body>
+    <header>
+        <h1>{{ nome_academia }}</h1>
+
+        <nav>
+            <a href="{% url 'inicio' %}">Início</a>
+            |
+            <a href="{% url 'lista_turmas' %}">Grade de turmas</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Sobre a academia</h2>
+
+        <p><strong>Endereço:</strong> {{ endereco }}</p>
+        <p><strong>Telefone:</strong> {{ telefone }}</p>
+
+        <h2>Modalidades</h2>
+
+        {% if modalidades %}
+            <ul>
+                {% for modalidade in modalidades %}
+                    <li>
+                        <h3>{{ modalidade.nome }}</h3>
+                        <p>{{ modalidade.descricao }}</p>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>Nenhuma modalidade ativa cadastrada.</p>
+        {% endif %}
+    </main>
+</body>
+</html>
