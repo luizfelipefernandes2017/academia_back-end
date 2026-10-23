@@ -8,6 +8,7 @@ class ModalidadeAdmin(admin.ModelAdmin):
     list_display = ("nome", "ativa")
     list_filter = ("ativa",)
     search_fields = ("nome",)
+    ordering = ("nome",)
 
 
 @admin.register(Turma)
