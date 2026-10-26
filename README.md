@@ -1,6 +1,6 @@
 # Academia incrivel hulk
 
-Sistema web desenvolvido para a Academia Corpo em Movimento.
+Sistema web desenvolvido para a Academia incrivel hulk.
 
 O projeto permite que a proprietária cadastre modalidades e turmas pelo painel administrativo. Também possui uma página inicial pública e uma página pública com a grade de turmas.
 
